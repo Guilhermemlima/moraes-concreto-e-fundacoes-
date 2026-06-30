@@ -1,0 +1,47 @@
+(function(){
+  "use strict";
+  var html = ''
+  + '<footer class="footer">'
+  +   '<div class="container">'
+  +     '<div class="footer-top">'
+  +       '<div class="footer-brand">'
+  +         '<div class="logo on-dark">'
+  +           '<span class="logo-mark"><img src="assets/logo-mark.png" alt="Logo Moraes"/></span>'
+  +           '<span class="logo-txt"><strong>MORAES</strong><span>Concreto e Fundações</span></span>'
+  +         '</div>'
+  +         '<p>Soluções integradas para sua obra. Concreto usinado, bombeamento e fundações em hélice contínua monitorada com qualidade e tecnologia desde 2013.</p>'
+  +       '</div>'
+  +       '<div class="footer-col">'
+  +         '<h5>Navegação</h5>'
+  +         '<a href="index.html">Início</a>'
+  +         '<a href="sobre.html">Sobre Nós</a>'
+  +         '<a href="solucoes.html">Soluções</a>'
+  +         '<a href="obras.html">Obras</a>'
+  +         '<a href="contato.html">Contato</a>'
+  +       '</div>'
+  +       '<div class="footer-col">'
+  +         '<h5>Serviços</h5>'
+  +         '<a href="solucoes.html#concreto">Concreto Usinado</a>'
+  +         '<a href="solucoes.html#bombeamento">Bombeamento</a>'
+  +         '<a href="solucoes.html#fundacoes">Fundações HCM</a>'
+  +         '<a href="contato.html#orcamento">Solicitar Orçamento</a>'
+  +       '</div>'
+  +       '<div class="footer-col">'
+  +         '<h5>Contato</h5>'
+  +         '<a data-wa="Olá! Vim pelo site da Moraes.">WhatsApp: (47) 99786-2275</a>'
+  +         '<a href="mailto:venda@moraesconcreto.com">venda@moraesconcreto.com</a>'
+  +         '<a href="mailto:engenharia@moraesfundacoes.com.br">engenharia@moraesfundacoes.com.br</a>'
+  +         '<a href="contato.html">Rua Dom Francisco, 30 – Balneário Camboriú – SC</a>'
+  +       '</div>'
+  +     '</div>'
+  +     '<div class="footer-bottom">'
+  +       '<span class="footer-copy">© <span id="year">2026</span> Moraes Concreto e Fundações. Todos os direitos reservados.</span>'
+  +       '<span class="footer-copy">Balneário Camboriú – SC</span>'
+  +     '</div>'
+  +   '</div>'
+  + '</footer>';
+
+  document.querySelectorAll('[data-include="footer"]').forEach(function(el){
+    el.outerHTML = html;
+  });
+})();

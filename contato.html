@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#0d2b18"/>
+<link rel="icon" href="favicon.ico" sizes="any"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<title>Contato e Orçamento | Moraes Concreto e Fundações</title>
+<meta name="description" content="Solicite seu orçamento sem compromisso. Fale com a Moraes Concreto e Fundações pelo WhatsApp, e-mail ou formulário. Resposta em até 2 horas."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="Moraes Concreto e Fundações">
+      <span class="logo-mark"><img src="assets/logo-mark.png" alt="Logo Moraes"/></span>
+      <span class="logo-txt"><strong>MORAES</strong><span>Concreto e Fundações</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="solucoes.html">Soluções</a>
+      <a href="obras.html">Obras</a>
+      <a href="contato.html" class="active">Contato</a>
+      <a href="contato.html#orcamento" class="nav-cta">Solicite Orçamento</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-glow"></div>
+  <div class="container page-hero-inner">
+    <div class="crumb"><a href="index.html">Início</a><span>›</span>Contato</div>
+    <h1>Fale com a gente e <span class="accent">solicite seu orçamento</span></h1>
+    <p>Estamos prontos para atender sua obra. Resposta rápida e atendimento direto pelo canal de sua preferência.</p>
+  </div>
+</section>
+
+<!-- ORÇAMENTO -->
+<section class="section orc" id="orcamento">
+  <div class="container orc-inner">
+    <div class="orc-text reveal">
+      <h2 class="orc-h2">Solicite seu orçamento sem compromisso</h2>
+      <p>Preencha os dados e nossa equipe técnica entra em contato rapidamente pelo WhatsApp para entender sua obra e apresentar a melhor solução.</p>
+      <ul class="orc-perks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Resposta em até 2 horas</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Orçamento claro e detalhado</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Atendimento técnico especializado</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Sem compromisso</li>
+      </ul>
+    </div>
+    <form class="form-card reveal d1" id="orcForm" novalidate>
+      <h3>Solicitar orçamento</h3>
+      <p class="fc-sub">Os campos serão enviados diretamente para nosso WhatsApp.</p>
+      <div class="form-row"><label for="nome">Nome completo <span class="req">*</span></label><input type="text" id="nome" name="nome" placeholder="Seu nome" required/></div>
+      <div class="form-row"><label for="fone">WhatsApp / Telefone <span class="req">*</span></label><input type="tel" id="fone" name="fone" placeholder="(47) 90000-0000" required/></div>
+      <div class="form-row"><label for="servico">Serviço de interesse <span class="req">*</span></label>
+        <select id="servico" name="servico" required>
+          <option value="" disabled selected>Selecione o serviço</option>
+          <option>Concreto usinado</option>
+          <option>Bombeamento de concreto</option>
+          <option>Concreto + bombeamento</option>
+          <option>Fundações (hélice contínua monitorada)</option>
+          <option>Projeto / dimensionamento de fundação</option>
+          <option>Outro / não sei ainda</option>
+        </select>
+      </div>
+      <div class="form-row"><label for="cidade">Cidade da obra</label><input type="text" id="cidade" name="cidade" placeholder="Ex: Balneário Camboriú"/></div>
+      <div class="form-row"><label for="msg">Descreva sua obra</label><textarea id="msg" name="msg" placeholder="Ex: prédio de 10 andares, volume estimado, prazo..."></textarea></div>
+      <button type="submit" class="btn btn-wa btn-block btn-lg">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.039zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        Solicitar orçamento via WhatsApp
+      </button>
+      <p class="form-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Seus dados não são armazenados — abrimos a conversa direto no WhatsApp.</p>
+    </form>
+  </div>
+</section>
+
+<!-- CONTATO CARDS -->
+<section class="section contato" id="contato">
+  <div class="container">
+    <div class="sec-head reveal"><span class="tag-pill">Contato</span><h2 class="sec-title">Outros canais de atendimento</h2><p class="sec-sub">Escolha o canal de sua preferência. Estamos prontos para atender sua obra.</p></div>
+    <div class="contato-grid">
+      <a class="contato-card reveal" data-wa="Olá! Vim pelo site e gostaria de falar com a Moraes Concreto e Fundações.">
+        <div class="ctc-ico"><svg class="fill" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.039zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></div>
+        <h4>WhatsApp</h4><p>(47) 99786-2275<br/>Resposta em até 2h</p>
+      </a>
+      <div class="contato-card reveal d1">
+        <div class="ctc-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+        <h4>E-mail</h4><p><a href="mailto:venda@moraesconcreto.com">venda@moraesconcreto.com</a><br/><a href="mailto:engenharia@moraesfundacoes.com.br">engenharia@moraesfundacoes.com.br</a></p>
+      </div>
+      <div class="contato-card reveal d2">
+        <div class="ctc-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h4>Endereço</h4><p>Rua Dom Francisco, 30<br/>Vila Real – Balneário Camboriú – SC</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="sec-head reveal"><span class="tag-pill">Dúvidas frequentes</span><h2 class="sec-title">Perguntas frequentes</h2></div>
+    <div class="faq-wrap">
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Quais cidades a Moraes Concreto atende?<span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><div class="faq-a-inner">A concreteira atende Balneário Camboriú, Camboriú, Itajaí, Itapema, Bombinhas e Porto Belo. A Moraes Fundações executa obras em toda a Região Sul do país.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Em quanto tempo recebo uma resposta?<span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><div class="faq-a-inner">Em horário comercial, nossa equipe responde em até 2 horas pelo WhatsApp. Quanto mais detalhes da obra você enviar, mais rápido e preciso é o orçamento.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">A Moraes faz sondagem do solo?<span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><div class="faq-a-inner">A execução de sondagens é feita por empresas parceiras. Oferecemos assessoria para a contratação de sondagens e investigações geotécnicas, além do acompanhamento técnico para o projeto de fundação.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Vocês atendem obras de qualquer porte?<span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><div class="faq-a-inner">Sim. Atendemos desde residências unifamiliares até prédios, galpões industriais, loteamentos e obras de infraestrutura.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<div data-include="footer"></div>
+
+<a class="wa-float" data-wa="Olá! Vim pelo site e gostaria de mais informações." aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.039zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+
+<div class="mobcta">
+  <a href="tel:+5547997862275" class="m-call"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Ligar</a>
+  <a class="m-wa" data-wa="Olá! Vim pelo site da Moraes."><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.039zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>WhatsApp</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/footer.js"></script>
+<script src="assets/main.js"></script>
+<script src="assets/anim.js"></script>
+</body>
+</html>
