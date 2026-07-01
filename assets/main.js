@@ -113,7 +113,7 @@
     var slides = Array.prototype.slice.call(carousel.querySelectorAll(".hero-slide"));
     var dotsWrap = document.getElementById("heroDots");
     var n = slides.length, idx = 0, timer = null;
-    var DELAY = 10000;
+    var DELAY = 5000;
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     // dots
