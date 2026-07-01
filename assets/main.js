@@ -112,10 +112,8 @@
     var track  = carousel.querySelector(".hero-track");
     var slides = Array.prototype.slice.call(carousel.querySelectorAll(".hero-slide"));
     var dotsWrap = document.getElementById("heroDots");
-    var prevBtn  = document.getElementById("heroPrev");
-    var nextBtn  = document.getElementById("heroNext");
     var n = slides.length, idx = 0, timer = null;
-    var DELAY = 6000;
+    var DELAY = 10000;
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     // dots
@@ -146,9 +144,6 @@
     function start(){ if(!reduce && !timer && !document.hidden) timer = setInterval(next, DELAY); }
     function stop(){ if(timer){ clearInterval(timer); timer = null; } }
     function restart(){ stop(); start(); }
-
-    if(nextBtn) nextBtn.addEventListener("click", function(){ next(); restart(); });
-    if(prevBtn) prevBtn.addEventListener("click", function(){ prev(); restart(); });
 
     // pausa ao passar o mouse / foco
     carousel.addEventListener("mouseenter", stop);
