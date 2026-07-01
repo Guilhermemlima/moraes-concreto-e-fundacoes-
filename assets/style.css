@@ -43,7 +43,7 @@ section{scroll-margin-top:80px}
 .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08);transform:translateY(-2px)}
 .btn-dark{background:var(--ink);color:#fff}
 .btn-dark:hover{background:#000;transform:translateY(-2px)}
-.btn-block{width:100%}
+.btn-block{width:100%;white-space:normal}
 .btn-lg{padding:16px 28px;font-size:16px}
 
 /* Headings */
@@ -349,7 +349,7 @@ html.gsap .reveal{transition:none}
 
 /* Responsive */
 @media (max-width:960px){
-  .hero-inner,.sobre-inner,.orc-inner,.hero-slide{grid-template-columns:1fr;gap:44px}
+  .hero-inner,.sobre-inner,.orc-inner,.hero-slide{grid-template-columns:minmax(0,1fr);gap:44px}
   .sobre-visual{max-width:480px}
   .sol-grid,.dif-grid,.obras-grid,.contato-grid,.depo-grid{grid-template-columns:repeat(2,1fr)}
   .trust-inner{grid-template-columns:repeat(2,1fr);gap:18px}
@@ -382,6 +382,8 @@ html.gsap .reveal{transition:none}
   .hero-btns .btn{flex:1}
   .footer-top{grid-template-columns:1fr}
   .sobre-year{left:50%;transform:translateX(-50%)}
+  /* evita o zoom automático do iOS ao focar campos (precisa >=16px) */
+  .form-row input,.form-row select,.form-row textarea{font-size:16px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;scroll-behavior:auto!important}
