@@ -22,15 +22,16 @@
     }
   });
 
-  // ---- Entrada do HERO (home) em timeline ----
-  if(document.querySelector(".hero")){
+  // ---- Entrada do HERO (home) em timeline — apenas o slide ativo ----
+  if(document.querySelector(".hero-slide.active")){
+    var a = ".hero-slide.active ";
     var tl = gsap.timeline({defaults:{ease:"power3.out", duration:.85}});
-    tl.from(".hero-badge", {y:22, opacity:0})
-      .from(".hero h1",    {y:26, opacity:0}, "-=.55")
-      .from(".hero-p",     {y:20, opacity:0}, "-=.6")
-      .from(".hero-trust", {y:18, opacity:0}, "-=.6")
-      .from(".hero-btns",  {y:18, opacity:0}, "-=.6")
-      .from(".hero-stats", {y:22, opacity:0}, "-=.55");
+    tl.from(a + ".hero-badge", {y:22, opacity:0})
+      .from(a + "h1",          {y:26, opacity:0}, "-=.55")
+      .from(a + ".hero-p",     {y:20, opacity:0}, "-=.6")
+      .from(a + ".hero-btns",  {y:18, opacity:0}, "-=.6")
+      .from(a + ".hero-card",  {y:18, opacity:0, stagger:.1}, "-=.55")
+      .from(".hero-stats",     {y:22, opacity:0}, "-=.5");
   }
 
   // ---- Entrada das páginas internas (page-hero) ----

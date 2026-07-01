@@ -106,6 +106,79 @@
     });
   }
 
+  // === Hero carrossel ===
+  var carousel = document.getElementById("heroCarousel");
+  if(carousel){
+    var track  = carousel.querySelector(".hero-track");
+    var slides = Array.prototype.slice.call(carousel.querySelectorAll(".hero-slide"));
+    var dotsWrap = document.getElementById("heroDots");
+    var prevBtn  = document.getElementById("heroPrev");
+    var nextBtn  = document.getElementById("heroNext");
+    var n = slides.length, idx = 0, timer = null;
+    var DELAY = 6000;
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // dots
+    var dots = [];
+    for(var s=0; s<n; s++){
+      (function(k){
+        var d = document.createElement("button");
+        d.className = "hero-dot" + (k===0 ? " active" : "");
+        d.setAttribute("role","tab");
+        d.setAttribute("aria-label","Ir para o slide " + (k+1));
+        d.addEventListener("click", function(){ go(k); restart(); });
+        dotsWrap.appendChild(d); dots.push(d);
+      })(s);
+    }
+
+    function go(i){
+      idx = (i + n) % n;
+      track.style.transform = "translateX(-" + (idx*100) + "%)";
+      for(var k=0;k<n;k++){
+        dots[k].classList.toggle("active", k===idx);
+        slides[k].classList.toggle("active", k===idx);
+        slides[k].setAttribute("aria-hidden", k===idx ? "false" : "true");
+      }
+    }
+    function next(){ go(idx+1); }
+    function prev(){ go(idx-1); }
+
+    function start(){ if(!reduce && !timer && !document.hidden) timer = setInterval(next, DELAY); }
+    function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+    function restart(){ stop(); start(); }
+
+    if(nextBtn) nextBtn.addEventListener("click", function(){ next(); restart(); });
+    if(prevBtn) prevBtn.addEventListener("click", function(){ prev(); restart(); });
+
+    // pausa ao passar o mouse / foco
+    carousel.addEventListener("mouseenter", stop);
+    carousel.addEventListener("mouseleave", start);
+    carousel.addEventListener("focusin", stop);
+    carousel.addEventListener("focusout", start);
+
+    // pausa quando a aba não está visível
+    document.addEventListener("visibilitychange", function(){ document.hidden ? stop() : start(); });
+
+    // teclado
+    carousel.addEventListener("keydown", function(e){
+      if(e.key === "ArrowLeft"){ prev(); restart(); }
+      else if(e.key === "ArrowRight"){ next(); restart(); }
+    });
+
+    // swipe (touch)
+    var x0 = null;
+    carousel.addEventListener("touchstart", function(e){ x0 = e.touches[0].clientX; stop(); }, {passive:true});
+    carousel.addEventListener("touchend", function(e){
+      if(x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if(Math.abs(dx) > 45){ dx < 0 ? next() : prev(); }
+      x0 = null; start();
+    }, {passive:true});
+
+    go(0);
+    start();
+  }
+
   // === Year ===
   var y = document.getElementById("year");
   if(y) y.textContent = new Date().getFullYear();
