@@ -360,7 +360,7 @@ html.gsap .reveal{transition:none}
   .cta-band-inner{flex-direction:column;align-items:flex-start}
 }
 @media (max-width:760px){
-  .section{padding:64px 0}
+  .section{padding:60px 0}
   .nav-toggle{display:block}
   .nav-links{position:fixed;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:#fff;border-bottom:1px solid var(--line);padding:14px 24px 22px;box-shadow:0 16px 30px -16px rgba(0,0,0,.3);transform:translateY(-130%);transition:transform .35s var(--ease)}
   .nav-links.open{transform:translateY(0)}
@@ -370,16 +370,32 @@ html.gsap .reveal{transition:none}
   .check-list{grid-template-columns:1fr}
   .footer-bottom{flex-direction:column;text-align:center}
   .mobcta{display:flex}
-  .wa-float{bottom:78px}
+  /* barra fixa inferior ja tem WhatsApp/Ligar -> esconde o botao flutuante p/ nao poluir/sobrepor */
+  .wa-float{display:none}
   body{padding-bottom:70px}
+  /* hero mais compacto */
+  .hero{padding:98px 0 40px}
+  .hero-slide{gap:28px}
+  .hero-cards{gap:11px}
+  .hero-card{padding:15px 16px;gap:14px}
+  .hero-dots{margin-top:20px}
+  .hero-stats-full{margin-top:20px}
+  .page-hero{padding:104px 0 44px}
 }
 @media (max-width:520px){
   .container{padding:0 18px}
+  .section{padding:48px 0}
   .sol-grid,.dif-grid,.obras-grid,.contato-grid,.depo-grid,.steps-grid,.trust-inner{grid-template-columns:1fr}
   .hero-stats{grid-template-columns:1fr;gap:1px}
-  .stat-cell{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px}
-  .stat-num{font-size:26px}.stat-lbl{margin-top:0}
-  .hero-btns .btn{flex:1}
+  .stat-cell{display:flex;align-items:center;justify-content:center;gap:10px;padding:13px 14px}
+  .stat-num{font-size:24px}.stat-lbl{margin-top:0}
+  .hero-btns{gap:10px}
+  .hero-btns .btn{flex:1 1 100%}
+  .hero-card-ico{width:44px;height:44px}
+  .hero-card h4{font-size:15px}
+  .hero-card p{font-size:12px}
+  .trust-inner{padding:20px 0;gap:14px}
+  .sec-head{margin-bottom:36px}
   .footer-top{grid-template-columns:1fr}
   .sobre-year{left:50%;transform:translateX(-50%)}
   /* evita o zoom automático do iOS ao focar campos (precisa >=16px) */
