@@ -82,7 +82,7 @@ h2.sec-title{font-size:clamp(26px,4vw,40px);font-weight:800;line-height:1.15;let
 .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 /* Hero (home) */
-.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(135deg,#06150d 0%,#0d2b18 55%,#0a2e12 100%);padding:128px 0 84px}
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(135deg,rgba(6,21,13,.94) 0%,rgba(13,43,24,.82) 52%,rgba(10,46,18,.9) 100%),#0a2e12 url('img/hero.jpg') center/cover no-repeat;padding:128px 0 84px}
 .hero-grid-overlay{position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,.022) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,.022) 40px);mask-image:radial-gradient(circle at 70% 40%,#000,transparent 75%)}
 .hero-glow{position:absolute;right:-120px;top:30%;width:520px;height:520px;pointer-events:none;background:radial-gradient(circle,rgba(27,107,47,.35) 0%,transparent 70%)}
 .hero-glow.two{left:-160px;top:auto;bottom:-180px;width:440px;height:440px;background:radial-gradient(circle,rgba(242,111,33,.12) 0%,transparent 70%)}
@@ -204,6 +204,9 @@ h2.sec-title{font-size:clamp(26px,4vw,40px);font-weight:800;line-height:1.15;let
 .obra-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
 .obra-img{aspect-ratio:16/10;position:relative;background:linear-gradient(135deg,#1c2b22,#0c1410);display:flex;align-items:center;justify-content:center}
 .obra-img svg{width:40px;height:40px;stroke:#46584c}
+.obra-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.obra-card:hover .obra-img img{transform:scale(1.05)}
+.obra-img img{transition:transform .5s var(--ease)}
 .obra-chip{position:absolute;top:12px;left:12px;background:var(--green);color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:5px 11px;border-radius:100px;border:1px solid var(--green-soft)}
 .obra-info{padding:18px 20px}
 .obra-info h4{font-size:16px;font-weight:700;margin-bottom:5px}
